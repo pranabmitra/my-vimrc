@@ -1,0 +1,39 @@
+color molokai
+
+"disable indentation white spaces coloring
+let g:indent_guides_enable_on_vim_startup = 0
+
+"disable spell checking
+set nospell
+set relativenumber
+
+"enable linting for using syntastic plugin
+let g:syntastic_mode_map = { 'mode': 'active',
+                            \ 'active_filetypes': ['javascript', 'html', 'css'],
+                            \ 'passive_filetypes': [] }
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list=1
+let g:syntastic_auto_loc_list=1
+let g:syntastic_check_on_open=1
+let g:syntastic_check_on_wq=0
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_args = '--config '. $HOME .'/.eslintrc.json'
+let g:syntastic_html_tidy_exec = 'tidy5'
+
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
+
+set tags=./tags,tags;$HOME
+
+" Fold-unFold code
+set foldmethod=indent   
+set foldnestmax=10
+set nofoldenable
+set foldlevel=2
+
