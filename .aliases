@@ -1,0 +1,10 @@
+function find_in_js {
+    find $1 -type f -name "*.js" -exec grep -Hn --color "$2" {} \;
+}
+
+function find_files {
+    find $1 -type f -name "$2" -exec grep -Hn --color -l "$3" {} +
+}
+
+alias findjs=find_in_js
+alias findfiles=find_files
