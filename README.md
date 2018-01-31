@@ -8,11 +8,12 @@ in the project directory.
 
 
 ### Find text
-Put .aliases file in the root directory, add "source ~/.aliases" into "~/.zshrc or ~/.bashrc" file
-Run "source ~/.zshrc" in the terminal to get updated
+Put .aliases file in the root directory, add **source ~/.aliases** into *~/.zshrc or ~/.bashrc* file
+Run *source ~/.zshrc* in the terminal to get updated
 
 Now we can use the like the following to find text in the project folder:
 > findjs project/appFolder searchText
+
 > findfiles project/appFolder "*.js" searchText
 
-This is just a sample example, we can add more aliases like those
+This is just a sample example, we can add more aliases like that
